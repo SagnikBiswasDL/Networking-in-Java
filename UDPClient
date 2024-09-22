@@ -1,0 +1,29 @@
+import java.net.*;
+
+public class UDPClient {
+    public static void main(String[] args) throws Exception {
+        // Step 1: Create a DatagramSocket to send and receive data
+        DatagramSocket clientSocket = new DatagramSocket();
+
+        // Step 2: Prepare the message to be sent
+        String message = "Hello, UDP Server!";
+        byte[] sendBuffer = message.getBytes();
+
+        // Step 3: Send the packet to the server at localhost and port 8080
+        InetAddress serverAddress = InetAddress.getByName("localhost");
+        DatagramPacket sendPacket = new DatagramPacket(sendBuffer, sendBuffer.length, serverAddress, 8080);
+        clientSocket.send(sendPacket);
+        
+        // Step 4: Prepare a buffer to receive the response
+        byte[] receiveBuffer = new byte[1024];
+        DatagramPacket receivePacket = new DatagramPacket(receiveBuffer, receiveBuffer.length);
+        clientSocket.receive(receivePacket); // This method blocks until a packet is received
+
+        // Step 5: Print the received response
+        String responseMessage = new String(receivePacket.getData(), 0, receivePacket.getLength());
+        System.out.println("Server response: " + responseMessage);
+
+        // Step 6: Close the socket
+        clientSocket.close();
+    }
+}
