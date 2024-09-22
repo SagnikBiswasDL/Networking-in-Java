@@ -1,4 +1,4 @@
-# Networking Projects with Java
+# Fundamental Networking Demonstration with Java
 
 This repository contains several networking projects that I developed using Java. These projects focus on how computers communicate over networks using common techniques like sending and receiving data between devices.
 
