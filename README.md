@@ -1,41 +1,36 @@
-# Embedded Systems Projects with Arduino
+# Networking Projects with Java
 
-This repository contains projects I developed during my internship, focusing on creating real-world systems using Arduino. These projects demonstrate how sensors, motors, and displays can work together to perform tasks like controlling devices or collecting and displaying information.
+This repository contains several networking projects that I developed using Java. These projects focus on how computers communicate over networks using common techniques like sending and receiving data between devices.
 
 ## Project Overview
 
-### 1. Real-Time Monitoring with OLED Display
-- **File**: `real_time_monitoring_oled.ino`
-- **What It Does**: This project reads temperature and humidity from a sensor and shows the information on a small screen in real-time.
-- **Key Components**: Temperature sensor (DHT11), OLED display, Arduino board.
-- **Why It’s Useful**: It demonstrates how to monitor environmental conditions in real-time, which is commonly used in weather stations, home automation, or industrial settings.
+### 1. Simple TCP Client-Server Communication
+- **File**: `tcp_client_server.java`
+- **What It Does**: A basic example where one computer (the client) sends a message to another computer (the server), and the server responds back.
+- **Why It’s Useful**: This is how many online services work, where your device (the client) talks to a server (like when you check your email or visit a website).
 
-### 2. Motor Control with Stepper Motor (X-Y Plotter)
-- **File**: `stepper_motor_xy_plotter.ino`
-- **What It Does**: This project moves a motor based on joystick input, simulating how a machine like a plotter would move to draw precise shapes on a surface.
-- **Key Components**: Stepper motor, joystick, Arduino board.
-- **Why It’s Useful**: It shows how to control the movement of machines, which is useful for robotics or precision tools like 3D printers.
+### 2. File Transfer over UDP
+- **File**: `udp_file_transfer.java`
+- **What It Does**: This project transfers a file from one device to another using a network protocol called UDP.
+- **Why It’s Useful**: File transfer is a common task, and this shows how to send data between computers quickly, even though UDP doesn’t guarantee every part of the file will arrive (this project includes error handling to deal with that).
 
-### 3. Motor Speed Control Using a Knob (PWM)
-- **File**: `pwm_motor_control.ino`
-- **What It Does**: This project allows you to control the speed of a motor by turning a knob (a potentiometer).
-- **Key Components**: DC motor, potentiometer (knob), Arduino board.
-- **Why It’s Useful**: Controlling motor speed is important in many machines like fans, conveyor belts, or electric vehicles.
+### 3. Simulated Web Request (HTTP)
+- **File**: `http_request_simulation.java`
+- **What It Does**: This project simulates how your browser sends a request to a website and how the website responds back.
+- **Why It’s Useful**: It demonstrates the basics of how the web works (HTTP requests) without needing to visit an actual website.
 
-### 4. Logging Sensor Data to an SD Card
-- **File**: `sensor_data_logging_sd.ino`
-- **What It Does**: This project reads temperature and humidity data from a sensor and saves the information to an SD card for later analysis.
-- **Key Components**: DHT11 sensor, SD card module, Arduino board.
-- **Why It’s Useful**: It shows how to collect and save data over time, which is important for projects that need to track changes (like climate monitoring or equipment performance).
+### 4. Real-Time Chat Application (TCP)
+- **File**: `tcp_chat_application.java`
+- **What It Does**: Multiple people can send messages to each other over a network in real-time, with a server handling all the connections.
+- **Why It’s Useful**: Real-time communication is the backbone of apps like WhatsApp, Slack, and other messaging platforms.
 
-### 5. Measuring Distance Using Ultrasonic Sensor
-- **File**: `ultrasonic_distance_lcd.ino`
-- **What It Does**: This project measures how far an object is using sound waves and displays the distance on a small screen.
-- **Key Components**: Ultrasonic sensor (HC-SR04), LCD display, Arduino board.
-- **Why It’s Useful**: Measuring distance is a common task for robots, automated vehicles, and safety systems.
+### 5. Ping Client-Server (UDP)
+- **File**: `udp_ping_client_server.java`
+- **What It Does**: Simulates the ‘ping’ command, where one device sends a signal to another to see if it’s reachable.
+- **Why It’s Useful**: This is useful for testing if a computer or server is online and how fast data can travel between them (used in network diagnostics).
 
 ## How to Use These Projects
-1. Download or clone the repository.
-2. Open the `.ino` files in the Arduino IDE.
-3. Connect the listed components to your Arduino board based on each project.
-4. Upload the code to your board and see the project in action.
+1. Clone or download the repository.
+2. Compile and run the Java files in your IDE (Eclipse, IntelliJ, or others).
+3. Ensure your computers or devices are connected to the same network (if testing across multiple devices).
+4. Follow the instructions in the comments of each file to understand the network setup.
