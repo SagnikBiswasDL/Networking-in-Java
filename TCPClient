@@ -1,0 +1,25 @@
+import java.io.*;
+import java.net.*;
+
+public class TCPClient {
+    public static void main(String[] args) throws IOException {
+        // Step 1: Create a socket to connect to the server at localhost and port 8080
+        Socket socket = new Socket("localhost", 8080);
+
+        // Step 2: Create input and output streams for communication
+        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+
+        // Step 3: Send a message to the server
+        out.println("Hello, Server!");
+
+        // Step 4: Receive a response from the server
+        String response = in.readLine();
+        System.out.println("Server response: " + response);
+
+        // Step 5: Close streams and socket
+        in.close();
+        out.close();
+        socket.close();
+    }
+}
