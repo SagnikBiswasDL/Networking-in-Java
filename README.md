@@ -29,8 +29,8 @@ This repository contains several networking projects that I developed using Java
 - **What It Does**: Simulates the ‘ping’ command, where one device sends a signal to another to see if it’s reachable.
 - **Why It’s Useful**: This is useful for testing if a computer or server is online and how fast data can travel between them (used in network diagnostics).
 
-## How to Use These Projects
-1. Clone or download the repository.
-2. Compile and run the Java files in your IDE (Eclipse, IntelliJ, or others).
-3. Ensure your computers or devices are connected to the same network (if testing across multiple devices).
-4. Follow the instructions in the comments of each file to understand the network setup.
+### 6. TCP Data Accuracy Demonstration
+- **File**: `tcp_data_accuracy.java`
+- **What It Does**: This project tests how accurately data is transmitted over TCP by comparing the data sent from the client to what the server receives. It measures the accuracy of the transmission by calculating the percentage of matching bytes.
+- **Why It’s Useful**: This simulates real-world network transmissions where data integrity is critical. The accuracy measurement helps verify the reliability of the network in maintaining the correctness of transmitted data.
+- **Sample Output**:
